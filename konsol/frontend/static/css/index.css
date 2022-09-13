@@ -1,0 +1,457 @@
+:root {
+    --primary-light: #19c3a6;
+    --primary: #17b59a;
+    --primary-dark: #15a78e;
+    
+    --white: #FFFFFF;
+    --greyLight-1: #CCD2DB;
+    --greyLight-2: #A8AEB5;
+    --greyLight-3: #6D7175;
+    --greyDark: #383d42;
+
+    --defaultFont: #323336;
+
+    --shadow: 3px 3px 6px #dbdde1,
+            -3px -3px 6px #ffffff !important;
+
+    --inner-shadow: inset 3px 3px 6px #dbdde1,
+                inset -3px -3px 6px #ffffff !important;
+}
+
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    /* color: white; */
+    color: var(--defaultFont);
+    /* background-color: black; */
+    background-color: #eef0f5
+}
+
+.main{
+    position: fixed;
+    width: 100%; height:100%;
+    left: 0; right: 0;
+
+}
+.app{
+    width: 100%; height:100%;
+    /* display: flex; */
+    /* border: 1px solid pink !important; */
+}
+
+.center{
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%, -50%);
+    /* height: 100%; */
+    /* border: 1px solid black !important; */
+    border-radius: 16px;
+    padding: 64px 32px;
+    box-shadow:  var(--shadow);
+}
+
+.wrap{
+    /* padding: 64px; */
+    /* background-color: pink; */
+    border-radius: 16px;
+    /* border: 1px solid black !important; */
+    height: 100%;
+}
+.content-wrap{
+    /* padding: 12px 0; */
+    /* border: 1px solid black; */
+}
+.error-message{
+    color: #B52125;
+}
+.title-image{
+    padding-bottom: 48px;
+}
+
+
+/* regular button */
+.button-container{
+    /* border: 1px solid black !important; */
+    padding: 16px 0px;
+    /* display: inline-block; */
+    margin: 0 auto;
+    align-items: center;
+    display: inline-flex;
+    
+}
+
+.button{
+    padding: 12px 16px !important;
+    margin: auto 12px!important;
+    /* border-radius: 4px !important; */
+    font-size: 1rem !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    background: #eef0f5 !important;
+    box-shadow:  var(--shadow) !important;
+    color: var(--defaultFont) !important;
+    text-decoration: none;
+    width: 192px;
+}
+.button:hover{
+    color: #17b59a !important;
+    transition: 0.25s linear;
+}
+
+.button.submit:hover{
+    color: #17b59a!important
+}
+
+.button.cancel:hover{
+    color: #B52125!important
+}
+
+.button:active {
+    border-radius: 10px !important;
+    background: #eef0f5 !important;
+    box-shadow:  var(--inner-shadow) !important;
+    transition: 1.25s linear !important;
+}
+@media (max-width:801px) {
+    .button{
+        margin: 8px 12px!important;
+    }
+    
+}
+
+
+
+
+/* radio button */
+.radio-button-container{
+    height: 48px;
+    width: 258px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow:  var(--shadow);
+    
+    position: relative;
+}
+input[type="radio"]{
+    display:none;
+}
+.radio-button{
+    
+    
+}
+
+label{
+    
+    padding: 20px;
+    font-size: 1rem !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    font-weight: 700 !important;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    
+
+}
+
+input[type="radio"]:checked + label{
+    transition: all 0.5s ease;
+    color: #17b59a
+}
+
+.segmented-control__color {
+    position: absolute;
+    height: 2.6rem;
+    width: 126px;
+    /* margin-left: .3rem; */
+    border-radius: 7px;
+    box-shadow: var(--inner-shadow);
+    pointer-events: none;
+    transform: translate(4px, -30px);
+}
+
+
+#tab-1:checked ~ .segmented-control__color {
+    
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#tab-2:checked ~ .segmented-control__color {
+    transform: translate(134px, -30px);
+    width: 118px;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+
+/* form input */
+.input-container{
+    padding: 8px 0;
+}
+.form__input{
+    width: calc(154px - 1.5rem);
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding-left: 1.4rem;
+    box-shadow: var(--inner-shadow);
+    background: none;
+    font-family: inherit;
+    color: var(--greyDark);
+}
+.form__input::placeholder { 
+    color: var(--greyLight-3); 
+}
+.form__input:focus { 
+    outline: none; 
+    box-shadow:  var(--shadow);
+}
+
+
+
+
+.music-room{
+    /* padding: 5px; */
+}
+
+
+.song-album-name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    /* padding-bottom: 16px; */
+    transform: translateY(-32px);
+
+}
+
+.album-image-container{
+    width: 384px;
+    height: 384px;;
+    
+    box-shadow: var(--shadow);
+    border-radius: 32px;
+}
+
+.album-image{
+    height: 95%;
+    width: 95%;
+    border-radius: 32px;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.song-title{
+    padding: 32px 0 2px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    /* border: 1px solid black; */
+}
+.song-artist{
+    
+    font-size: 1.1rem;
+    padding: 0px 0 2px 0;
+    color: var(--greyLight-3)
+}
+
+
+.icon-button-wrap{
+    padding: 16px 0 16px 0;
+    display: inline-flex;
+    align-items: center; 
+    /* position: absolute; */
+    /* border: 1px solid black; */
+}
+.icon-button{
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    border-radius: 50% !important;
+    box-shadow: var(--shadow);
+    z-index: 3;
+}
+
+.icon-button.submit.settings{
+    left: 32px;
+    position: absolute !important;
+
+    top: 24px;
+}
+
+.icon-button.cancel.close{
+    right: 32px;
+    position: absolute !important;
+    top: 24px;
+}
+.icon-button.control{
+    
+    margin: 0px 32px !important;
+    /* border: 1px solid black; */
+}
+
+.icon-button:hover{
+    background-color: inherit !important;
+    transition: 0.25s linear;
+}
+
+.icon-button:hover{
+    color: #17b59a;
+}
+
+.icon-button.control.play{
+    color: #17b59a;
+};
+
+.icon-button.control.play:hover{
+    background-color: var(--primary) !important;
+    transition: 0.25s linear;
+}
+
+.icon-button.cancel:hover{
+    color: #B52125!important;
+}
+
+.icon-button:active {
+    
+    background: #eef0f5 !important;
+    box-shadow:  var(--inner-shadow) !important;
+    transition: 1.25s linear !important;
+}
+
+.room-code-wrap{
+    position:absolute;
+    left: 32px;
+    bottom: 24px;
+    box-shadow: var(--shadow);
+    border-radius: 16px;
+    height: 2rem;
+    padding: 8px;
+    width: calc(100% - 80px);
+
+}
+.room-code{
+    position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    font-size: 1.1rem;
+}
+
+.progress-bar-wrap{
+    padding-top: 8px;
+}
+
+.progress-bar{
+    position: relative;
+    height: 12px;
+    border-radius: 20px;
+    box-shadow: var(--inner-shadow);
+    overflow: hidden;
+}
+
+.progress-bar.progress{
+    background-color:#6D7175;
+    float: left;
+    position: absolute;
+    transform: translateY(-12px);
+    box-shadow: inset 3px 3px 6px #64686c,
+                inset -3px -3px 6px #767a7e !important;
+                overflow: hidden;
+    z-index: 5;
+}
+
+
+
+
+.circle-wrap{
+    /* border: 1px solid black; */
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /* transform: translateY(-8px); */
+}
+.outer-circle{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    /* padding: 8px; */
+    z-index: 1;
+}
+
+.inner-circle{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: var(--inner-shadow);
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+circle{
+    fill:none;
+    stroke: url('#GradientColor');
+    stroke-width: 8px;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 100;
+    animation: bounce 2s linear forwards;
+}
+.svg-circular-bar{
+    z-index: 999;
+    position:absolute;
+    transform: translateX(-50px);
+}
+
+.svg-circular-bar.next{
+    transform: translateX(82px) !important;
+}
+
+
+
+.CircularProgressbar {
+    width: 74px;
+    height: 78px;
+    position: absolute;
+    /* transform: translate(-8px, 0) !important; */
+    /*
+     * This fixes an issue where the CircularProgressbar svg has
+     * 0 width inside a "display: flex" container, and thus not visible.
+     */
+    /* width: 100%; */
+    /*
+     * This fixes a centering issue with CircularProgressbarWithChildren:
+     * https://github.com/kevinsqi/react-circular-progressbar/issues/94
+     */
+    vertical-align: middle;
+    
+    fill: #15a78e;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+    width: 100%;
+    height: 100%;
+    stroke: black;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+    stroke: transparent;
+    /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+    stroke-linecap: round;
+    
+}
+
+
+.CircularProgressbar .CircularProgressbar-background {
+    fill: #d6d6d6;
+}
