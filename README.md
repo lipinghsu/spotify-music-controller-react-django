@@ -1,3 +1,2 @@
 # spotify-music-controller-react-django
-
-Uploading Screen Recording 2022-09-12 at 11.14.40 PM 2.mov…
+https://user-images.githubusercontent.com/20471997/189985983-4e7193ec-2023-41fd-a4d7-df045ee2463b.mov
